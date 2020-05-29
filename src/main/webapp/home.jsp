@@ -16,6 +16,6 @@
     </body>
     <form action="registrazione" method="POST">
         <input type="checkbox" name="hey" value="ON" checked="checked" />
-        SEI FROCIO
+        anto
     </form>
 </html>
