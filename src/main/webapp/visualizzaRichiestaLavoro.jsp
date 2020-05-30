@@ -4,6 +4,7 @@
     Author     : Antonio
 --%>
 
+<%@page import="entita.Richiestalavoro"%>
 <%@page import="entita.Dipendente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,56 +40,23 @@
                 </tr>
             </thead>
             <tbody>
+                <%
+                    if(dip.getRichiesteLavoro()!=null)
+                    {
+                        for(Richiestalavoro e:dip.getRichiesteLavoro())
+                        {
+                
+                %>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><a href="valutazionerichiesta.jsp?id=<%=e.getId()%>&azienda=<%=e.getAzienda()%>&competenze=<%=e.getCompetenze()%>&appuntamento=<%=e.getData()%>&ora=<%=e.getOrario()%>&note=<%=e.getNote()%>"><%=e.getAzienda()%></a></td>
+                    <td><a href="valutazionerichiesta.jsp?id=<%=e.getId()%>&azienda=<%=e.getAzienda()%>&competenze=<%=e.getCompetenze()%>&appuntamento=<%=e.getData()%>&ora=<%=e.getOrario()%>&note=<%=e.getNote()%>"><%=e.getCompetenze()%></a></td>
+                    <td><a href="valutazionerichiesta.jsp?id=<%=e.getId()%>&azienda=<%=e.getAzienda()%>&competenze=<%=e.getCompetenze()%>&appuntamento=<%=e.getData()%>&ora=<%=e.getOrario()%>&note=<%=e.getNote()%>"><%=e.getData()%></a></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <%  }
+                    }
+                    }
+                  %>
+                
             </tbody>
         </table>
 

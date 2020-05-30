@@ -28,9 +28,11 @@ public class Dipendente implements Serializable {
     private String username;
     private String password;
     private ArrayList<Richiestalavoro> richieste;
+    private ArrayList<Lavoroaccettato> lavori;
 
     public Dipendente() {
         this.richieste=new ArrayList<Richiestalavoro>();
+        this.lavori=new ArrayList<Lavoroaccettato>();
     }
 
     public Dipendente(int id, String nome, String cognome, String competenze, String azienda, String username, String password) {
@@ -42,6 +44,7 @@ public class Dipendente implements Serializable {
         this.username = username;
         this.password = password;
         this.richieste=new ArrayList<Richiestalavoro>();
+        this.lavori=new ArrayList<Lavoroaccettato>();
     }
 
     public String getCompetenze() {
@@ -68,6 +71,16 @@ public class Dipendente implements Serializable {
     public ArrayList<Richiestalavoro> getRichiesteLavoro()
     {
         return this.richieste; 
+    }
+    
+    public void addRichiestaAcc(Lavoroaccettato r)
+    {
+        this.lavori.add(r);
+    }
+    
+    public ArrayList<Lavoroaccettato> getRichiesteLavoroAcc()
+    {
+        return this.lavori; 
     }
     
 
@@ -123,7 +136,7 @@ public class Dipendente implements Serializable {
 
     @Override
     public String toString() {
-        return "Dipendente{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", competenze=" + competenze + ", azienda=" + azienda + ", username=" + username + ", password=" + password + "richieste="+richieste+ '}';
+        return "Dipendente{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", competenze=" + competenze + ", azienda=" + azienda + ", username=" + username + ", password=" + password + " richieste="+richieste+ "  lav.acc="+lavori+'}';
     }
 
     @Override

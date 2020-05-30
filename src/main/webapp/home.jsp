@@ -29,7 +29,7 @@
              <li> <a href="areautente.jsp">AREA UTENTE</a> </li>
              <li><a href="chisiamo.jsp">CHI SIAMO</a> </li>
              <li><a href="agenda.jsp">AGENDA</a> </li>
-             <li> <a href="inviarichiestalavoro.jsp">RICHIESTA LAVORO</a> <li> 
+             <li> <a href="visualizzaRichiestaLavoro.jsp">RICHIESTA LAVORO</a> <li> 
            
             <li> <a href="./logout">LOGOUT</a> </li>
         </ul>

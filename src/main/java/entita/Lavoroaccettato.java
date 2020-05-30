@@ -11,43 +11,23 @@ import java.util.Objects;
  *
  * @author Gino
  */
-public class Richiestalavoro {
+public class Lavoroaccettato {
     
-    private int id;
-    private String nome;
     private String azienda;
     private String competenze;
     private String data;
     private String orario;
     private String note;
 
-    public Richiestalavoro() {
+    public Lavoroaccettato() {
     }
 
-    public Richiestalavoro(String nome, String azienda, String competenze, String data, String orario, String note) {
-        this.nome = nome;
+    public Lavoroaccettato(String azienda, String competenze, String data, String orario, String note) {
         this.azienda = azienda;
         this.competenze = competenze;
         this.data = data;
         this.orario = orario;
         this.note = note;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getAzienda() {
@@ -92,7 +72,7 @@ public class Richiestalavoro {
 
     @Override
     public int hashCode() {
-        int hash = 3;
+        int hash = 5;
         return hash;
     }
 
@@ -107,10 +87,7 @@ public class Richiestalavoro {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Richiestalavoro other = (Richiestalavoro) obj;
-        if (!Objects.equals(this.nome, other.nome)) {
-            return false;
-        }
+        final Lavoroaccettato other = (Lavoroaccettato) obj;
         if (!Objects.equals(this.azienda, other.azienda)) {
             return false;
         }
@@ -131,9 +108,8 @@ public class Richiestalavoro {
 
     @Override
     public String toString() {
-        return "Richiestalavoro{" + "nome=" + nome + ", azienda=" + azienda + ", competenze=" + competenze + ", data=" + data + ", orario=" + orario + ", note=" + note + '}';
+        return "Lavoroaccettato{" + "azienda=" + azienda + ", competenze=" + competenze + ", data=" + data + ", orario=" + orario + ", note=" + note + '}';
     }
-    
     
     
     
