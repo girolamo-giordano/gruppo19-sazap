@@ -17,6 +17,9 @@
 </head>
     <body>
         
+        <a href="home.jsp"><img src="SAZAPlogo2.png" width="300" height="300" alt="SAZAPlogo2"/> </a>
+
+        
         <%
             Dipendente dip= (Dipendente)request.getSession().getAttribute("loggatod");
             Amministratore amm= (Amministratore) request.getSession().getAttribute("loggatoa");
@@ -24,50 +27,57 @@
         %>
         
         //lavoratore <%=dip.toString()%>
-        <ul>
-             <li><a href="home.jsp">HOME</a> </li>
-             <li> <a href="areautente.jsp">AREA UTENTE</a> </li>
-             <li><a href="chisiamo.jsp">CHI SIAMO</a> </li>
-             <li><a href="agenda.jsp">AGENDA</a> </li>
-             <li> <a href="visualizzaRichiestaLavoro.jsp">RICHIESTA LAVORO</a> <li> 
+        
+        <div class="menu">
+        
+        <a href="home.jsp">HOME</a> </li>
+        <a href="areautente.jsp">AREA UTENTE</a> 
+             <a href="chisiamo.jsp">CHI SIAMO</a> 
+             <a href="agenda.jsp">AGENDA</a> 
+             <a href="visualizzaRichiestaLavoro.jsp">RICHIESTA LAVORO</a> 
            
-            <li> <a href="./logout">LOGOUT</a> </li>
-        </ul>
+             <a href="./logout">LOGOUT</a> 
+        </div>
+        
         <%
             } else if (amm != null && dip==null){
             %>
         
         //Amministratore <%=amm.toString()%>
-        <ul>
-             <li><a href="home.jsp">HOME</a> </li>
-             <li> <a href="areautente.jsp">AREA UTENTE</a> </li>
-             <li><a href="chisiamo.jsp">CHI SIAMO</a> </li>
-             <li><a href="visualizzadipendenti.jsp">VISUALIZZA DIPENDENTI</a> </li>
+        
+        <div class="menu">
+             <a href="home.jsp">HOME</a> 
+             <a href="areautente.jsp">AREA UTENTE</a> 
+             <a href="chisiamo.jsp">CHI SIAMO</a> 
+             <a href="visualizzadipendenti.jsp">VISUALIZZA DIPENDENTI</a> 
              
            
-            <li> <a href="./logout">LOGOUT</a> </li>
-        </ul>
+            <a href="./logout">LOGOUT</a>
+            
+        </div> 
+        
          <% }else{%>
         
-        
-        <ul> 
-             <li><a href="home.jsp">HOME</a> </li>
-             <li><a href="chisiamo.jsp">CHI SIAMO</a> </li>
+         
+        <div class="menu">
+             <a href="home.jsp">HOME</a>
+             <a href="chisiamo.jsp">CHI SIAMO</a>
 
-             <li> <a href="registrazione.jsp">Registrazione</a> </li>
-             <li><a href="login.jsp">Login</a> </li>
+             <a href="registrazione.jsp">REGISTRAZIONE</a>
+             <a href="login.jsp">LOGIN</a>
                           
-        </ul>
+        </div>
+         
         <%}%>
        
                       
         <div class="row">
             <div class="column">
-                <img src="areaUtentefoto.jpeg" width="200" height="200" alt="areaUtentefoto"/>
+                <a href="areautente.jsp"> <img src="areaUtentefoto.jpeg" width="400" height="400" alt="areaUtentefoto"/> </a>
 
             </div>
             <div class="column">
-                <img src="chisiamofoto.jpeg" width="500" height="500" alt="chisiamofoto"/>
+                <a href="chisiamo.jsp"> <img src="chisiamofoto.jpeg" width="400" height="400" alt="chisiamofoto"/> </a>
 
             </div> <br>
         </div>
@@ -82,7 +92,7 @@
 
             <div class="mySlides fade">
               <div class="numbertext">2 / 2</div>
-              <img src="cambiare.png" style="width:100%">
+              <img src="agricoltore.jpg" style="width:100%">
               
             </div>
 
@@ -99,6 +109,8 @@
               <span class="dot" onclick="currentSlide(2)"></span> 
               
             </div>
+            
+        
 
             <script>
                 var slideIndex = 1;
@@ -128,6 +140,15 @@
                   dots[slideIndex-1].className += " active";
                 }
             </script>
+            
+            <footer>
+                &copy; 2020, Sazap
+                <br>
+                All trademarks and registered trademarks appearing on  <br>
+                this site are the property of their respective owners.
+                
+            </footer>
+                
         
         
     </body>
