@@ -5,6 +5,8 @@
  */
 package control;
 
+import entita.Amministratore;
+import entita.Azienda;
 import entita.Dipendente;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -63,25 +65,65 @@ public class registrazione extends HttpServlet {
         
         String password= request.getParameter("password");
         String cpassword=request.getParameter("cpassword");
+        String valr=request.getParameter("valr");
         Random rand= new Random();
         
         ArrayList<Dipendente> dipendenti= (ArrayList<Dipendente>)request.getSession().getAttribute("dipendenti");
-        if(dipendenti==null)
+        ArrayList<Amministratore> amministratori=(ArrayList<Amministratore>)request.getSession().getAttribute("amministratori");
+        ArrayList<Azienda> aziende=(ArrayList<Azienda>)request.getSession().getAttribute("aziende");
+        if(valr.equals("1"))
         {
-            dipendenti= new ArrayList<Dipendente>();
+            if(dipendenti==null)
+            {
+                dipendenti= new ArrayList<Dipendente>();
+            }
+
+            if(password.equals(cpassword)){
+
+                Dipendente dip= new Dipendente();
+                dip.setNome(request.getParameter("nome"));
+                dip.setCognome(request.getParameter("cognome"));
+                dip.setUsername(request.getParameter("username"));
+                dip.setPassword(password);
+                dip.setId(rand.nextInt(20000));
+                dip.setAzienda(request.getParameter("azienda"));
+                dip.setCompetenze(request.getParameter("competenze"));
+                dipendenti.add(dip);
+                request.getSession().setAttribute(dip.getUsername(), dip);
+                request.getSession().setAttribute("dipendenti", dipendenti);
+
+            }
         }
-        
-        if(password.equals(cpassword)){
-        
-            Dipendente dip= new Dipendente();
-            dip.setNome(request.getParameter("nome"));
-            dip.setCognome(request.getParameter("cognome"));
-            dip.setUsername(request.getParameter("username"));
-            dip.setPassword(password);
-            dip.setId(rand.nextInt(20000));
-            dipendenti.add(dip);
-            request.getSession().setAttribute(dip.getUsername(), dip);
-            request.getSession().setAttribute("dipendenti", dipendenti);
+        else if(valr.equals("0"))
+        {
+            if(amministratori==null)
+            {
+                amministratori= new ArrayList<Amministratore>();
+            }
+            
+            if(aziende==null)
+            {
+                aziende= new ArrayList<Azienda>();
+            }
+
+            if(password.equals(cpassword)){
+
+                Amministratore dip= new Amministratore();
+                Azienda az= new Azienda();
+                dip.setNome(request.getParameter("nome"));
+                dip.setCognome(request.getParameter("cognome"));
+                dip.setUsername(request.getParameter("username"));
+                dip.setPassword(password);
+                dip.setId(rand.nextInt(20000));
+                amministratori.add(dip);
+                az.setNome(request.getParameter("nomeaz"));
+                az.setIndirizzo(request.getParameter("indaz"));
+                az.setNumerotel(request.getParameter("telefa"));
+                request.getSession().setAttribute(dip.getUsername(), dip);
+                request.getSession().setAttribute("amministratori", amministratori);
+                request.getSession().setAttribute("aziende", aziende);
+
+            }
             
         }
         

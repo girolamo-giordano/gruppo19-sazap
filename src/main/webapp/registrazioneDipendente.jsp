@@ -17,6 +17,7 @@
         <div id="reg">
             <h1 id="titolo">REGISTRAZIONE</h1>
             <form name="registrazione" action="./registrazione" method="POST">
+                <input type="hidden" id="custId" name="valr" value="1">
                 <label> Nome: </label>
                 <input type="text" name="nome" value="Inserisci nome.." required/> <br>
                 <label> Cognome: </label>

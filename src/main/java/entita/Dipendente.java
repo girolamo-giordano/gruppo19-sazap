@@ -6,6 +6,7 @@
 package entita;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,8 +27,10 @@ public class Dipendente implements Serializable {
     private String azienda;
     private String username;
     private String password;
+    private ArrayList<Richiestalavoro> richieste;
 
     public Dipendente() {
+        this.richieste=new ArrayList<Richiestalavoro>();
     }
 
     public Dipendente(int id, String nome, String cognome, String competenze, String azienda, String username, String password) {
@@ -38,6 +41,7 @@ public class Dipendente implements Serializable {
         this.azienda=azienda;
         this.username = username;
         this.password = password;
+        this.richieste=new ArrayList<Richiestalavoro>();
     }
 
     public String getCompetenze() {
@@ -56,6 +60,15 @@ public class Dipendente implements Serializable {
         this.azienda = azienda;
     }
     
+    public void addRichiesta(Richiestalavoro r)
+    {
+        this.richieste.add(r);
+    }
+    
+    public ArrayList<Richiestalavoro> getRichiesteLavoro()
+    {
+        return this.richieste; 
+    }
     
 
     public int getId() {
@@ -110,7 +123,7 @@ public class Dipendente implements Serializable {
 
     @Override
     public String toString() {
-        return "Dipendente{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", competenze=" + competenze + ", azienda=" + azienda + ", username=" + username + ", password=" + password + '}';
+        return "Dipendente{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", competenze=" + competenze + ", azienda=" + azienda + ", username=" + username + ", password=" + password + "richieste="+richieste+ '}';
     }
 
     @Override

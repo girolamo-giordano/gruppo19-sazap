@@ -23,7 +23,7 @@
             if(dip != null && amm==null){
         %>
         
-        //lavoratore 
+        //lavoratore <%=dip.toString()%>
         <ul>
              <li><a href="home.jsp">HOME</a> </li>
              <li> <a href="areautente.jsp">AREA UTENTE</a> </li>
@@ -37,12 +37,12 @@
             } else if (amm != null && dip==null){
             %>
         
-        //Amministratore 
+        //Amministratore <%=amm.toString()%>
         <ul>
              <li><a href="home.jsp">HOME</a> </li>
              <li> <a href="areautente.jsp">AREA UTENTE</a> </li>
              <li><a href="chisiamo.jsp">CHI SIAMO</a> </li>
-             <li><a href="agenda.jsp">VISUALIZZA DIPENDENTI</a> </li>
+             <li><a href="visualizzadipendenti.jsp">VISUALIZZA DIPENDENTI</a> </li>
              
            
             <li> <a href="./logout">LOGOUT</a> </li>

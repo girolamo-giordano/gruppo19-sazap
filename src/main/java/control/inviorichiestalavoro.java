@@ -5,8 +5,11 @@
  */
 package control;
 
+import entita.Dipendente;
+import entita.Richiestalavoro;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Gino
  */
-@WebServlet(name = "logout", urlPatterns = {"/logout"})
-public class logout extends HttpServlet {
+@WebServlet(name = "inviorichiestalavoro", urlPatterns = {"/inviorichiestalavoro"})
+public class inviorichiestalavoro extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,10 +47,6 @@ public class logout extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        request.getSession().setAttribute("loggatod", null);
-        request.getSession().setAttribute("loggatoa", null);
-        response.sendRedirect("./home.jsp");
-       
     }
 
     /**
@@ -61,7 +60,30 @@ public class logout extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+        ArrayList<Dipendente> dipendenti =(ArrayList<Dipendente>)request.getSession().getAttribute("dipendenti");
+        String id= request.getParameter("idl");
+        String nomel=request.getParameter("nomel");
+        String aziendal=request.getParameter("aziendal");
+        String competenzel=request.getParameter("competenzel");
+        String appuntamentol=request.getParameter("appuntamentol");
+        String oral=request.getParameter("oral");
+        String notel=request.getParameter("notel");
+        Richiestalavoro rl= new Richiestalavoro();
+        rl.setAzienda(aziendal);
+        rl.setCompetenze(competenzel);
+        rl.setData(appuntamentol);
+        rl.setOrario(oral);
+        rl.setNome(nomel);
+        rl.setNote(notel);
+        for(Dipendente e:dipendenti){
+            if(e.getId()==Integer.parseInt(id))
+            {
+                e.getRichiesteLavoro().add(rl);
+            }
+        }
+        
+        response.sendRedirect("./home.jsp");
+        
     }
 
     /**

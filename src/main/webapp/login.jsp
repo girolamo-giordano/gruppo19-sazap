@@ -23,8 +23,10 @@
                 <label> Password: </label>
                 <input type="password" name="password" value="Inserisci " required="" /> <br>
                 
-                <input type="radio" name="ruolo" value="Amministratore" checked="checked" />
-                <input type="radio" name="ruolo" value="Dipentente" />
+                <label> Amministratore: </label>
+                <input type="radio" name="ruolo" value="amministratore" checked="checked" />
+                <label> Dipendente: </label>
+                <input type="radio" name="ruolo" value="dipendente" />
                 
                 <input type="submit" value="LOGIN" name="submit" />
                 <input type="reset" value="Reset" name="reset" />

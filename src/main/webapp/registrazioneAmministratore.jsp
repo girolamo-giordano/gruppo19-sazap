@@ -18,6 +18,7 @@
             <h1 id="titolo">REGISTRAZIONE</h1>
             <form name="registrazione" action="./registrazione" method="POST">
                 <h2> INFORMAZIONI PERSONALI </h2>
+                 <input type="hidden" id="custId" name="valr" value="0">
                 <label> Nome: </label>
                 <input type="text" name="nome" value="Inserisci nome.." required/> <br>
                 <label> Cognome: </label>
@@ -32,11 +33,11 @@
                 
                 <h2> INFORMAZIONI AZIENDA </h2>
                 <label> Nome Azienda: </label>
-                <input type="text" name="nome" value="nome azienda.." required/> <br>
+                <input type="text" name="nomeaz" value="nome azienda.." required/> <br>
                 <label> Indirizzo azienda: </label>
-                <input type="text" name="cognome" value="indirizzo azienda.." required /> <br>
+                <input type="text" name="indaz" value="indirizzo azienda.." required /> <br>
                 <label> Telefono: </label>
-                <input type="number" name="nome" value="Telefono azienda.." required/> <br>
+                <input type="number" name="telefa" value="Telefono azienda.." required/> <br>
                 
                 
                 <input type="submit" value="REGISTRATI" name="submit" />
