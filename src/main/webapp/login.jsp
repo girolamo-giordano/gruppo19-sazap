@@ -1,7 +1,8 @@
+
 <%-- 
-    Document   : login.jsp
-    Created on : 30 mag 2020, 02:42:22
-    Author     : Gino
+    Document   : login
+    Created on : 29-mag-2020, 21.57.41
+    Author     : Antonio
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,11 +13,20 @@
         <title>Login</title>
     </head>
     <body>
-        <form name="login" action="./login" method="POST">
-            <input type="text" id="username" name="username" " placeholder="Inserire username.." required> 
-            <input type="text" id="password" name="password" " placeholder="Inserire password.." required>
-            <input class="submit" type="submit" value="Login">
-			<input class ="reset" type="reset">
-        </form>
+        
+        <div id="log">
+            <h1 id="titolo">Login</h1>
+            <form name="login" action="./login" method="POST">
+                
+                <label> Username: </label>
+                <input type="text" name="username" value="Inserisci username.." required=""/> <br>
+                <label> Password: </label>
+                <input type="password" name="password" value="Inserisci " required="" /> <br>
+                
+                <input type="submit" value="LOGIN" name="submit" />
+                <input type="reset" value="Reset" name="reset" />
+            </form>
+            <h2> NON SEI ANCORA REGISTRATO? VAI A <a href="registrazione.jsp">REGISTRAZIONE</a> </h2>
+            </div>
     </body>
 </html>

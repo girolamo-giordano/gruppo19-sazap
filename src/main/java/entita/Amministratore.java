@@ -7,56 +7,33 @@ package entita;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 /**
  *
- * @author Gino
+ * @author Antonio
  */
-public class Dipendente implements Serializable {
+public class Amministratore implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private int id;
     private String nome;
     private String cognome;
-    private String competenze;
     private String azienda;
     private String username;
     private String password;
 
-    public Dipendente() {
+    public Amministratore() {
     }
 
-    public Dipendente(int id, String nome, String cognome, String competenze, String azienda, String username, String password) {
+    public Amministratore(int id, String nome, String cognome, String azienda, String username, String password) {
         this.id = id;
         this.nome = nome;
         this.cognome = cognome;
-        this.competenze=competenze;
+        
         this.azienda=azienda;
         this.username = username;
         this.password = password;
     }
-
-    public String getCompetenze() {
-        return competenze;
-    }
-
-    public void setCompetenze(String competenze) {
-        this.competenze = competenze;
-    }
-
-    public String getAzienda() {
-        return azienda;
-    }
-
-    public void setAzienda(String azienda) {
-        this.azienda = azienda;
-    }
-    
-    
 
     public int getId() {
         return id;
@@ -66,51 +43,56 @@ public class Dipendente implements Serializable {
         this.id = id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public String getNome() {
         return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCognome() {
         return cognome;
     }
 
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public String getAzienda() {
+        return azienda;
+    }
+
+    public void setAzienda(String azienda) {
+        this.azienda = azienda;
+    }
+
     public String getUsername() {
         return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
-    public String toString() {
-        return "Dipendente{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", competenze=" + competenze + ", azienda=" + azienda + ", username=" + username + ", password=" + password + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 43 * hash + this.id;
+        hash = 43 * hash + Objects.hashCode(this.nome);
+        hash = 43 * hash + Objects.hashCode(this.cognome);
+        hash = 43 * hash + Objects.hashCode(this.azienda);
+        hash = 43 * hash + Objects.hashCode(this.username);
+        hash = 43 * hash + Objects.hashCode(this.password);
+        return hash;
     }
 
     @Override
@@ -124,7 +106,7 @@ public class Dipendente implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Dipendente other = (Dipendente) obj;
+        final Amministratore other = (Amministratore) obj;
         if (this.id != other.id) {
             return false;
         }
@@ -132,9 +114,6 @@ public class Dipendente implements Serializable {
             return false;
         }
         if (!Objects.equals(this.cognome, other.cognome)) {
-            return false;
-        }
-        if (!Objects.equals(this.competenze, other.competenze)) {
             return false;
         }
         if (!Objects.equals(this.azienda, other.azienda)) {
@@ -149,8 +128,14 @@ public class Dipendente implements Serializable {
         return true;
     }
 
-
+    @Override
+    public String toString() {
+        return "Amministratore{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", azienda=" + azienda + ", username=" + username + ", password=" + password + '}';
+    }
     
+    
+    
+
     
     
 }
