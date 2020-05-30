@@ -12,6 +12,11 @@
         <title>Chi siamo</title>
     </head>
     <body>
-        Siamo scemi
+        <div id="chiSiamo">
+            <img src="chisiamofoto.jpeg" width="500" height="500" alt="chisiamofoto"/> <br>
+            Azienda esperta nel settore agricolo con l'obiettivo <br>
+            Migliorare la vita di tutte le persone del settore
+
+        </div>
     </body>
 </html>

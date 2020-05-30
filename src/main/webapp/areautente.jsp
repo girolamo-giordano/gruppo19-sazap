@@ -4,7 +4,9 @@
     Author     : Gino
 --%>
 
+<%@page import="entita.Amministratore"%>
 <%@page import="entita.Dipendente"%>
+<%@page import="entita.Azienda"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,12 +16,7 @@
     </head>
     <body>
         <%
-            Dipendente dip= (Dipendente)request.getSession().getAttribute("loggato");
-            
-            
-        
-        
-   
+            Dipendente dip= (Dipendente)request.getSession().getAttribute("loggatod");
             if(dip != null){
             %>
             
@@ -31,10 +28,52 @@
                 <input type="text" name="nome" value=<%=dip.getNome()%> readonly/> <br>
                 <label> Cognome: </label>
                 <input type="text" name="cognome" value=<%=dip.getCognome()%> readonly /> <br>
+                
+                <label> Azienda: </label>
+                <input type="text" name="azienda" value=<%=dip.getAzienda()%> readonly/> <br>
+                <label> Competenza: </label>
+                <input type="text" name="competenza" value=<%=dip.getCompetenze()%> readonly /> <br>
+                
                 <label> Username: </label>
                 <input type="text" name="username" value=<%=dip.getUsername()%> readonly /> <br>
                 <label> Password: </label>
                 <input type="password" name="password" value="*******" /> <br>
+                
+            </form>
+            
+            </div>
+            <%
+                }
+                %>
+         <%
+            Amministratore amm= (Amministratore)request.getSession().getAttribute("loggatoa");
+            Azienda az= (Azienda) request.getSession();
+            
+            if(amm != null){
+            %>
+            
+            
+            <div id="reg">
+            <h1 id="titolo">AREA UTENTE</h1>
+            <form>
+                
+                <h2> INFORMAZIONI PERSONALI </h2>
+                <label> Nome: </label>
+                <input type="text" name="nome" value=<%=dip.getNome()%> readonly/> <br>
+                <label> Cognome: </label>
+                <input type="text" name="cognome" value=<%=dip.getCognome()%> readonly /> <br>
+                <label> Username: </label>
+                <input type="text" name="username" value=<%=dip.getUsername()%> readonly /> <br>
+                <label> Password: </label>
+                <input type="password" name="password" value="*******" /> <br>
+                
+                <h2> INFORMAZIONI AZIENDA </h2>
+                <label> Nome Azienda: </label>
+                <input type="text" name="nome" value=<%=%> readonly/> <br>
+                <label> Indirizzo azienda: </label>
+                <input type="text" name="cognome" value=<%=dip.getNome()%> readonly /> <br>
+                <label> Telefono: </label>
+                <input type="number" name="nome" value=<%=dip.getNome()%> readonly/> <br>
                 
             </form>
             
