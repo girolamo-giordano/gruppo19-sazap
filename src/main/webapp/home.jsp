@@ -18,8 +18,9 @@
     <body>
         
         <%
-            Dipendente dip= (Dipendente)request.getSession().getAttribute("loggato");
-            Amministratore amm= (Amministratore) request.getSession().getAttribute("loggato");
+            Dipendente dip= (Dipendente)request.getSession().getAttribute("loggatod");
+            Amministratore amm= (Amministratore) request.getSession().getAttribute("loggatoa");
+            if(dip != null && amm==null){
         %>
         
         //lavoratore 
@@ -32,6 +33,9 @@
            
             <li> <a href="./logout">LOGOUT</a> </li>
         </ul>
+        <%
+            } else if (amm != null && dip==null){
+            %>
         
         //Amministratore 
         <ul>
@@ -43,7 +47,7 @@
            
             <li> <a href="./logout">LOGOUT</a> </li>
         </ul>
-        
+         <% }else{%>
         
         
         <ul> 
@@ -54,6 +58,8 @@
              <li><a href="login.jsp">Login</a> </li>
                           
         </ul>
+        <%}%>
+       
                       
         <div class="row">
             <div class="column">

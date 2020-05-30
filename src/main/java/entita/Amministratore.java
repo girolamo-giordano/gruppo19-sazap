@@ -18,19 +18,16 @@ public class Amministratore implements Serializable {
     private int id;
     private String nome;
     private String cognome;
-    private String azienda;
     private String username;
     private String password;
 
     public Amministratore() {
     }
 
-    public Amministratore(int id, String nome, String cognome, String azienda, String username, String password) {
+    public Amministratore(int id, String nome, String cognome, String username, String password) {
         this.id = id;
         this.nome = nome;
         this.cognome = cognome;
-        
-        this.azienda=azienda;
         this.username = username;
         this.password = password;
     }
@@ -59,13 +56,7 @@ public class Amministratore implements Serializable {
         this.cognome = cognome;
     }
 
-    public String getAzienda() {
-        return azienda;
-    }
-
-    public void setAzienda(String azienda) {
-        this.azienda = azienda;
-    }
+    
 
     public String getUsername() {
         return username;
@@ -89,7 +80,7 @@ public class Amministratore implements Serializable {
         hash = 43 * hash + this.id;
         hash = 43 * hash + Objects.hashCode(this.nome);
         hash = 43 * hash + Objects.hashCode(this.cognome);
-        hash = 43 * hash + Objects.hashCode(this.azienda);
+ 
         hash = 43 * hash + Objects.hashCode(this.username);
         hash = 43 * hash + Objects.hashCode(this.password);
         return hash;
@@ -116,9 +107,7 @@ public class Amministratore implements Serializable {
         if (!Objects.equals(this.cognome, other.cognome)) {
             return false;
         }
-        if (!Objects.equals(this.azienda, other.azienda)) {
-            return false;
-        }
+        
         if (!Objects.equals(this.username, other.username)) {
             return false;
         }
@@ -130,7 +119,7 @@ public class Amministratore implements Serializable {
 
     @Override
     public String toString() {
-        return "Amministratore{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", azienda=" + azienda + ", username=" + username + ", password=" + password + '}';
+        return "Amministratore{" + "id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", username=" + username + ", password=" + password + '}';
     }
     
     

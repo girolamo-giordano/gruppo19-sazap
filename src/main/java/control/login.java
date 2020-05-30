@@ -5,6 +5,7 @@
  */
 package control;
 
+import entita.Amministratore;
 import entita.Dipendente;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -60,13 +61,31 @@ public class login extends HttpServlet {
             throws ServletException, IOException {
            String username= request.getParameter("username");
            String password= request.getParameter("password");
-           Dipendente dip= (Dipendente)request.getSession().getAttribute(username);
-           if(dip!=null)
+           String ruolo=request.getParameter("ruolo");
+           
+           if(ruolo.equals("dipendente"))
            {
-               if(password.equals(dip.getPassword()))
-               {
-                   request.getSession().setAttribute("loggato", dip);
-               }
+            Dipendente dip= (Dipendente)request.getSession().getAttribute(username);
+            if(dip!=null)
+            {
+                
+                if(password.equals(dip.getPassword()))
+                {
+                    request.getSession().setAttribute("loggatod", dip);
+                }
+            }
+           }
+           else if(ruolo.equals("amministratore"))
+           {
+            Amministratore amm= (Amministratore)request.getSession().getAttribute(username);
+            if(amm!=null)
+            {
+                
+                if(password.equals(amm.getPassword()))
+                {
+                    request.getSession().setAttribute("loggatoa", amm);
+                }
+            } 
            }
            
            response.sendRedirect("./home.jsp");
