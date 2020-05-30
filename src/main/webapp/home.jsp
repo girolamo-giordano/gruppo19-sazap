@@ -4,18 +4,38 @@
     Author     : Gino
 --%>
 
+<%@page import="entita.Dipendente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>HomePage</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
+        <a href="chisiamo.jsp">Chi siamo</a>
+        <a href="inviarichiestalavoro.jsp">Richiesta Lavoro</a>
+        <%
+            Dipendente dip= (Dipendente)request.getSession().getAttribute("loggato");
+            
+            
+            if(dip != null){
+            %>
+            ciao <%=dip.getNome()%>  <%=dip.getCognome()%> <%=dip.getId()%>
+            <a href="areautente.jsp">Area utente</a>
+            <a href="./logout">Logout</a>
+            <%
+                }else{
+                %>
+              
+                    <a href="registrazione.jsp">Registrati qui</a>
+                    <a href="login.jsp">Login qui</a>
+                      <%}        %>
+        
+        
     </body>
-    <form action="registrazione" method="POST">
-        <input type="checkbox" name="hey" value="ON" checked="checked" />
-        anto
-    </form>
+   
+        
+
 </html>
