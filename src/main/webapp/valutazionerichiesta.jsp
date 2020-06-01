@@ -47,7 +47,7 @@
             
             <span> <div class="nameField">Note:</div>
                   
-                        <input type="text" name="note" value="<%=request.getParameter("note")%>" readonly="readonly"/>  </span>
+                        <textarea name="note" value="<%=request.getParameter("note")%>" readonly="readonly" style="resize:none"><%=request.getParameter("note")%> </textarea> </span>
             
             <div id="bottoni">
                 <input type="submit" value="ACCETTA" name="submit" class="butt" />
