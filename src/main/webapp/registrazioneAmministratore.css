@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1-giu-2020, 9.48.08
+    Author     : Antonio
+*/
+
+
+#reg {
+  
+  padding: 20px;
+  width: 50%;
+  background-color:#e6ef7f;
+  height: 100%; /* only for demonstration, should be removed */
+}
+
+.butt{
+    background-color: #4CAF50;
+    padding:10px;
+}
+
+ span{
+        display:block;  
+        margin-left: 30px;
+    }
+
+    .nameField{
+
+        display:inline-block;
+        width:80px;
+        text-align: right;
+        padding: 14px 10px 0 0;
+        margin:0 0 7px 0;
+    }
+    .inputField{
+        display:inline-block;
+        width:130px;
+        margin:0;
+        margin:0 0 7px 0;
+    }
+
+    #bottoni{
+        margin-top: 30px;
+    }
+    
+    
+
+footer{
+    background-color: #e6ef7f;
+    text-align: center;
+    margin-top:20px;
+}
+
+
+
+.sidenav {
+  height: 350px;
+  width: 200px;
+ float:left;
+  background-color: #e6ef7f;
+  
+}
+
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    /* border: 258px; */
+    padding-left: 18px;
+    padding-top: 18px;
+    background: none;
+    text-align: left;
+    padding-bottom: 20px;
+    /* outline: none; */
+    border-bottom: dotted;
+}
+
+/* On mouse-over */
+.sidenav a:hover{
+  background-color: #81b522;
+  
+}

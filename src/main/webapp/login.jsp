@@ -40,7 +40,7 @@
                 <label> Username: </label>
                 <input type="text" name="username" placeholder="Inserisci username.." required=""/> <br>
                 <label> Password: </label>
-                <input type="password" name="password" value="Inserisci " required="" /> <br>
+                <input type="password" name="password" placeholder="Inserisci password " required="" /> <br>
                 
                 <div id="radio" style="margin-top: 10px;">
                 <label> Amministratore: </label>

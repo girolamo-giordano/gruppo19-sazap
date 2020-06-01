@@ -83,27 +83,49 @@
   display: table;
 }
 
-.menu a {
-  background-color:#e6ef7f ;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background-color: #81b522;
-}
-
-.menu a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
 footer{
     background-color: #e6ef7f;
     text-align: center;
     margin-top:20px;
 }
 
+
+
+.sidenav {
+    height: 450px;
+    width: 200px;
+    float:left;
+    background-color: #e6ef7f;
+  
+}
+
+/* Style the sidenav links and the dropdown button */
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    /* border: 258px; */
+    padding-left: 18px;
+    padding-top: 18px;
+    background: none;
+    text-align: left;
+    padding-bottom: 20px;
+    /* outline: none; */
+    border-bottom: dotted;
+}
+
+/* On mouse-over */
+.sidenav a:hover{
+  background-color: #81b522;
+  
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
 

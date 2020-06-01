@@ -11,40 +11,74 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <LINK rel= "stylesheet" href="registrazioneAmministratore.css" type="text/css">
         <title>Registrazione</title>
     </head>
     <body>
+                <a href="home.jsp"><img src="SAZAPlogo2.png" width="300" height="300" alt="SAZAPlogo2"/> </a>
+
+        <div class="container">
+        
+            <div class="sidenav">
+             <a href="home.jsp">HOME</a>
+             <a href="chisiamo.jsp">CHI SIAMO</a>
+
+             <a href="registrazione.jsp">REGISTRAZIONE</a>
+             <a href="login.jsp">LOGIN</a>
+                          
+            </div>
+            
+            <center>
         <div id="reg">
             <h1 id="titolo">REGISTRAZIONE</h1>
             <form name="registrazione" action="./registrazione" method="POST">
                 <h2> INFORMAZIONI PERSONALI </h2>
                  <input type="hidden" id="custId" name="valr" value="0">
-                <label> Nome: </label>
-                <input type="text" name="nome" value="Inserisci nome.." required/> <br>
-                <label> Cognome: </label>
-                <input type="text" name="cognome" value="Inserisci cognome.." required /> <br>
+                 <span>
+                 <div class="nameField"> Nome: </label></div>
+                 <div class="inputField">  <input type="text" name="nome" placeholder="Inserisci nome.." required/> </div> </span> 
                 
-                <label> Username: </label>
-                <input type="text" name="username" value="Inserisci username.." required/> <br>
-                <label> Password: </label>
-                <input type="password" name="password" value="Inserisci " required /> <br>
-                <label> Conferma Password: </label>
-                <input type="password" name="cpassword" value="Conferma " /> <br>
+                 <span><div class="nameField"> Cognome: </div>
+                     <div class="inputField"><input type="text" name="cognome" placeholder="Inserisci cognome.." required /></div></span> 
+                
+                     <span><div class="nameField"> Username: </div>
+                         <div class="inputField"><input type="text" name="username" placeholder="Inserisci username.." required/></div> </span> 
+                
+                         <span> <div class="nameField"> Password: </div>
+                             <div class="inputField"><input type="password" name="password" placeholder="Inserisci password " required /> </div> </span> 
+                
+                             <span> <div class="nameField"> Conferma Password: </div>
+                                 <div class="inputField"><input type="password" name="cpassword" placeholder="Conferma password " /> </div> </span> 
                 
                 <h2> INFORMAZIONI AZIENDA </h2>
-                <label> Nome Azienda: </label>
-                <input type="text" name="nomeaz" value="nome azienda.." required/> <br>
-                <label> Indirizzo azienda: </label>
-                <input type="text" name="indaz" value="indirizzo azienda.." required /> <br>
-                <label> Telefono: </label>
-                <input type="number" name="telefa" value="Telefono azienda.." required/> <br>
+                <span> <div class="nameField"> Nome Azienda: </div>
+                    <div class="inputField"> <input type="text" name="nomeaz" placeholder="nome azienda.." required/> </div> </span>  
                 
+                    <span> <div class="nameField"> Indirizzo azienda: </div>
+                        <div class="inputField"> <input type="text" name="indaz" placeholder="indirizzo azienda.." required /> </div> </span> 
                 
-                <input type="submit" value="REGISTRATI" name="submit" />
-                <input class ="reset" type="reset">
+                        <span> <div class="nameField"> Telefono: </div>
+                            <div class="inputField"> <input type="number" name="telefa" placeholder="Telefono azienda.." required/> </div></span> 
+                
+                <div id="bottoni">
+                <input type="submit" value="REGISTRATI" name="submit" class="butt" />
+                <input type="reset" value="RESET"class="butt">
+                </div>
             </form>
-            <h2> SEI GIA' REGISTRATO? VAI AL <a href="login.jsp">LOGIN</a> </h2>
+            
             </div>
+                <h2> SEI GIA' REGISTRATO? VAI AL <a href="login.jsp">LOGIN</a> </h2>
+            </center>
+        </div>
+                
+        
+        <footer>
+                &copy; 2020, Sazap
+                <br>
+                All trademarks and registered trademarks appearing on  <br>
+                this site are the property of their respective owners.
+                
+        </footer>
         
         
             
