@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author Gino
  */
-public class Lavoroaccettato {
+public class Lavoroaccettato implements Comparable<Lavoroaccettato>{
     
     private String azienda;
     private String competenze;
@@ -111,6 +111,9 @@ public class Lavoroaccettato {
         return "Lavoroaccettato{" + "azienda=" + azienda + ", competenze=" + competenze + ", data=" + data + ", orario=" + orario + ", note=" + note + '}';
     }
     
-    
+        @Override
+        public int compareTo(Lavoroaccettato o) {
+            return this.getData().compareTo(o.getData());
+    }
     
 }

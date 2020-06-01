@@ -4,6 +4,7 @@
     Author     : Antonio
 --%>
 
+<%@page import="entita.Lavoroaccettato"%>
 <%@page import="java.util.Comparator"%>
 <%@page import="entita.Richiestalavoro"%>
 <%@page import="java.util.ArrayList"%>
@@ -33,7 +34,7 @@
         </div>
        <%
            Dipendente dip= (Dipendente)request.getSession().getAttribute("loggatod");
-           Collections.sort(dip.getRichiesteLavoro());
+           Collections.sort(dip.getRichiesteLavoroAcc());
 
            %>
         <center>
@@ -47,12 +48,14 @@
                     {
                         matrix[i]=false;
                     }
-                for(Richiestalavoro e: dip.getRichiesteLavoro())
+                for(Lavoroaccettato e: dip.getRichiesteLavoroAcc())
                 {
+                    
+                
                     %>
                     <%
                    
-                    if(e.getData().substring(5,7).equals("01"))
+                    if(e.getData().substring(6,8).equals("01"))
                     {
                         
                         if(matrix[0]==false){
@@ -75,7 +78,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("02"))
+                    if(e.getData().substring(6,8).equals("02"))
                     {
                         
                         if(matrix[1]==false){
@@ -98,7 +101,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("03"))
+                    if(e.getData().substring(6,8).equals("03"))
                     {
                         
                         if(matrix[2]==false){
@@ -121,7 +124,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("04"))
+                    if(e.getData().substring(6,8).equals("04"))
                     {
                         
                         if(matrix[3]==false){
@@ -144,7 +147,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("05"))
+                    if(e.getData().substring(6,8).equals("05"))
                     {
                         
                         if(matrix[4]==false){
@@ -167,7 +170,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("06"))
+                    if(e.getData().substring(6,8).equals("06"))
                     {
                         
                         if(matrix[5]==false){
@@ -190,7 +193,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("07"))
+                    if(e.getData().substring(6,8).equals("07"))
                     {
                         
                         if(matrix[6]==false){
@@ -213,7 +216,7 @@
                 %>
             <%
                    
-                    if(e.getData().substring(5,7).equals("08"))
+                    if(e.getData().substring(6,8).equals("08"))
                     {
                         
                         if(matrix[7]==false){
@@ -236,7 +239,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("09"))
+                    if(e.getData().substring(6,8).equals("09"))
                     {
                         
                         if(matrix[8]==false){
@@ -259,7 +262,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("10"))
+                    if(e.getData().substring(6,8).equals("10"))
                     {
                         
                         if(matrix[9]==false){
@@ -282,7 +285,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("11"))
+                    if(e.getData().substring(6,8).equals("11"))
                     {
                         
                         if(matrix[10]==false){
@@ -305,7 +308,7 @@
                 %>
                 <%
                    
-                    if(e.getData().substring(5,7).equals("12"))
+                    if(e.getData().substring(6,8).equals("12"))
                     {
                         
                         if(matrix[11]==false){
