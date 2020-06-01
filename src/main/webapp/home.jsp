@@ -38,7 +38,7 @@
         <a href="areautente.jsp">AREA UTENTE</a> 
              <a href="chisiamo.jsp">CHI SIAMO</a> 
              <a href="agenda.jsp">AGENDA</a> 
-             <a href=visualizzaRichiestaLavoro.jsp">RICHIESTA LAVORO</a> 
+             <a href="visualizzaRichiestaLavoro.jsp">RICHIESTA LAVORO</a> 
            
              <a href="./logout">LOGOUT</a> 
         </div>

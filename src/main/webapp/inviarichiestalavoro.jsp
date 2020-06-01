@@ -47,10 +47,10 @@
                 <div class="inputField"><input type="text" name="competenzel" value="<%=request.getParameter("competenze")%>" readonly="readonly" /> </div></span>
                 
             <span><div class="nameField">Giorno appuntamento:</div>
-                <div class="inputField"><input type="date" name="appuntamentol " required  /> </div></span>
+                <div class="inputField"><input type="date" name="appuntamentol" required  /> </div></span>
             
             <span><div class="nameField">Ora appuntamento:</div>
-                <div class="inputField"> <input type="time" required  /> </div></span>
+                <div class="inputField"> <input type="time" name="oral" required  /> </div></span>
             
             <span><div class="nameField">Note:</div>
                 <div class="inputField"><textarea rows="2" cols="20" name="notel" placeholder="Inserire ulteriori note"> </textarea> </div></span
