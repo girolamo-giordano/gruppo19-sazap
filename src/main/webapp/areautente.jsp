@@ -17,7 +17,8 @@
     <body>
         <%
             Dipendente dip= (Dipendente)request.getSession().getAttribute("loggatod");
-            if(dip != null){
+            Amministratore amm= (Amministratore)request.getSession().getAttribute("loggatoa");
+            if(dip != null && amm== null){
             %>
             
             
@@ -46,10 +47,11 @@
                 }
                 %>
          <%
-            Amministratore amm= (Amministratore)request.getSession().getAttribute("loggatoa");
-            Azienda az= (Azienda) request.getSession();
             
-            if(amm != null){
+            
+            
+            if(amm != null && dip == null){
+               
             %>
             
             
@@ -59,21 +61,21 @@
                 
                 <h2> INFORMAZIONI PERSONALI </h2>
                 <label> Nome: </label>
-                <input type="text" name="nome" value=<%=dip.getNome()%> readonly/> <br>
+                <input type="text" name="nome" value=<%=amm.getNome()%> readonly/> <br>
                 <label> Cognome: </label>
-                <input type="text" name="cognome" value=<%=dip.getCognome()%> readonly /> <br>
+                <input type="text" name="cognome" value=<%=amm.getCognome()%> readonly /> <br>
                 <label> Username: </label>
-                <input type="text" name="username" value=<%=dip.getUsername()%> readonly /> <br>
+                <input type="text" name="username" value=<%=amm.getUsername()%> readonly /> <br>
                 <label> Password: </label>
                 <input type="password" name="password" value="*******" /> <br>
                 
                 <h2> INFORMAZIONI AZIENDA </h2>
                 <label> Nome Azienda: </label>
-                <input type="text" name="nome" value=<%=%> readonly/> <br>
+                <input type="text" name="nome" value=<%=amm.getAzienda().getNome()%> readonly/> <br>
                 <label> Indirizzo azienda: </label>
-                <input type="text" name="cognome" value=<%=dip.getNome()%> readonly /> <br>
+                <input type="text" name="cognome" value=<%=amm.getAzienda().getIndirizzo()%> readonly /> <br>
                 <label> Telefono: </label>
-                <input type="number" name="nome" value=<%=dip.getNome()%> readonly/> <br>
+                <input type="number" name="nome" value=<%=amm.getAzienda().getNumerotel()%> readonly/> <br>
                 
             </form>
             

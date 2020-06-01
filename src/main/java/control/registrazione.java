@@ -119,6 +119,7 @@ public class registrazione extends HttpServlet {
                 az.setNome(request.getParameter("nomeaz"));
                 az.setIndirizzo(request.getParameter("indaz"));
                 az.setNumerotel(request.getParameter("telefa"));
+                dip.setAzienda(az);
                 request.getSession().setAttribute(dip.getUsername(), dip);
                 request.getSession().setAttribute("amministratori", amministratori);
                 request.getSession().setAttribute("aziende", aziende);

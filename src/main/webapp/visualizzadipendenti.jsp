@@ -31,32 +31,38 @@
         <%
            
             ArrayList<Dipendente> dipendenti =(ArrayList<Dipendente>)request.getSession().getAttribute("dipendenti");
-            if(dipendenti!=null){
-                for(Dipendente e:dipendenti){
+            
+               
                     
             
             %>
             
             <table border="3">
                 <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        
-                    </tr>
-                </thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Azienda Attuale</th>
+                    <th>Competenze</th>
+                </tr>
+            </thead>
                 <tbody>
+                    <%
+                        if(dipendenti!=null){
+                            for(Dipendente e:dipendenti)
+                            {
+                        %>
+                        <tr>
+                            <td><a href="inviarichiestalavoro.jsp?id=<%=e.getId()%>&nome=<%=e.getNome()%>&azienda=<%=e.getAzienda()%>&competenze=<%=e.getCompetenze()%>&cognome=<%=e.getCognome()%>"><%=e.getNome()%></a><br></td>
+                            <td><a href="inviarichiestalavoro.jsp?id=<%=e.getId()%>&nome=<%=e.getNome()%>&azienda=<%=e.getAzienda()%>&competenze=<%=e.getCompetenze()%>&cognome=<%=e.getCognome()%>"><%=e.getAzienda()%></a><br></td>
+                            <td><a href="inviarichiestalavoro.jsp?id=<%=e.getId()%>&nome=<%=e.getNome()%>&azienda=<%=e.getAzienda()%>&competenze=<%=e.getCompetenze()%>&cognome=<%=e.getCognome()%>"><%=e.getCompetenze()%></a><br></td>
+                        </tr>
+                        <%}
+                        }
+                            %>
+                    
+                </tbody>
              
             </table>
-
-            <a href="inviarichiestalavoro.jsp?id=<%=e.getId()%>&nome=<%=e.getNome()%>&azienda=<%=e.getAzienda()%>&competenze=<%=e.getCompetenze()%>&cognome=<%=e.getCognome()%>"><%=e.toString()%></a><br>
-            
-            <%
-                        }
-                    }
-                %>
                 
         </div>
           <footer>

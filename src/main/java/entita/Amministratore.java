@@ -20,6 +20,7 @@ public class Amministratore implements Serializable {
     private String cognome;
     private String username;
     private String password;
+    private Azienda azienda;
 
     public Amministratore() {
     }
@@ -32,6 +33,15 @@ public class Amministratore implements Serializable {
         this.password = password;
     }
 
+    public Azienda getAzienda() {
+        return azienda;
+    }
+
+    public void setAzienda(Azienda azienda) {
+        this.azienda = azienda;
+    }
+
+    
     public int getId() {
         return id;
     }
