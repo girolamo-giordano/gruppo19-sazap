@@ -11,26 +11,33 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="visualizzaDipendenti.css" rel="stylesheet" type="text/css"/>
         <title>Visualizza Richiesta Lavoro</title>
     </head>
     <body>
+         <a href="home.jsp"><img src="SAZAPlogo2.png" width="300" height="300" alt="SAZAPlogo2"/> </a>
            <%
             Dipendente dip= (Dipendente)request.getSession().getAttribute("loggatod");
             
             if(dip != null ){
         %>
         
-        //lavoratore 
-        <ul>
-             <li><a href="home.jsp">HOME</a> </li>
-             <li> <a href="areautente.jsp">AREA UTENTE</a> </li>
-             <li><a href="chisiamo.jsp">CHI SIAMO</a> </li>
-             <li><a href="agenda.jsp">AGENDA</a> </li>
-             <li> <a href="inviarichiestalavoro.jsp">RICHIESTA LAVORO</a> <li> 
-           
-            <li> <a href="./logout">LOGOUT</a> </li>
-        </ul>
         
+        <div class="container">
+       <div class="sidenav">
+        
+        <a href="home.jsp">HOME</a> </li>
+        <a href="areautente.jsp">AREA UTENTE</a> 
+             <a href="chisiamo.jsp">CHI SIAMO</a> 
+             <a href="agenda.jsp">AGENDA</a> 
+             <a href="visualizzaRichiestaLavoro.jsp">RICHIESTA LAVORO</a> 
+           
+             <a href="./logout">LOGOUT</a> 
+        </div>
+        
+        <center>
+                <div id="tab">
+                    <h2> VISUALIZZAZIONE RICHIESTE LAVORI </h2>
         <table border="1" width="5">
             <thead>
                 <tr>
@@ -59,6 +66,16 @@
                 
             </tbody>
         </table>
+        </div>
+        </center>
+        </div>
+                  <footer>
+                &copy; 2020, Sazap
+                <br>
+                All trademarks and registered trademarks appearing on  <br>
+                this site are the property of their respective owners.
+                
+            </footer>  
 
         
     </body>

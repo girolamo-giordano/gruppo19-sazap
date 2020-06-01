@@ -4,16 +4,27 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 1-giu-2020, 14.51.06
+    Created on : 1-giu-2020, 16.30.45
     Author     : Antonio
 */
 
-#reg {
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1-giu-2020, 9.48.08
+    Author     : Antonio
+*/
+
+
+#valutazione {
   
   padding: 20px;
   width: 50%;
   background-color:#e6ef7f;
-  height: 700px; /* only for demonstration, should be removed */
+  height: 500px; /* only for demonstration, should be removed */
 }
 
 .butt{
@@ -54,6 +65,8 @@ footer{
 }
 
 
+
+
 .sidenav {
     height: 450px;
     width: 200px;
@@ -61,7 +74,6 @@ footer{
     background-color: #e6ef7f;
   
 }
-
 
 .sidenav a {
     text-decoration: none;
