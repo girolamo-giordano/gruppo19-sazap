@@ -4,19 +4,54 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 1-giu-2020, 11.07.40
+    Created on : 1-giu-2020, 14.51.06
     Author     : Antonio
 */
+
+#reg {
+  
+  padding: 20px;
+  width: 50%;
+  background-color:#e6ef7f;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+.butt{
+    background-color: #4CAF50;
+    padding:10px;
+}
+
+ span{
+        display:block;  
+        margin-left: 30px;
+    }
+
+    .nameField{
+
+        display:inline-block;
+        width:80px;
+        text-align: right;
+        padding: 14px 10px 0 0;
+        margin:0 0 7px 0;
+    }
+    .inputField{
+        display:inline-block;
+        width:130px;
+        margin:0;
+        margin:0 0 7px 0;
+    }
+
+    #bottoni{
+        margin-top: 30px;
+    }
+    
+    
 
 footer{
     background-color: #e6ef7f;
     text-align: center;
     margin-top:20px;
 }
-
-
-
-
 
 
 .sidenav {
@@ -47,18 +82,4 @@ footer{
 .sidenav a:hover{
   background-color: #81b522;
   
-}
-
-#chiSiamo {
-    background-color: #e6ef7f;
-    width: 50%;
-    height: 700px;
-    padding-top: 52px;
-}
-
-#text{
-    text-transform: uppercase;
-    padding-top: 50px;
-    font-weight: bold;
-    font-size: larger;
 }

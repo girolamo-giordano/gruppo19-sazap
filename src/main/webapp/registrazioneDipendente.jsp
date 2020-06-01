@@ -49,7 +49,7 @@
                          <div class="inputField"><input type="text" name="competenze" placeholder="Inserisci competenza.." required/></div> </span> 
                          
                          <span><div class="nameField"> Username: </div>
-                         <div class="inputField"><input type="text" name="username" placeholder="Inserisci usernsme.." required/></div> </span> 
+                         <div class="inputField"><input type="text" name="username" placeholder="Inserisci username.." required/></div> </span> 
                 
                          <span> <div class="nameField"> Password: </div>
                              <div class="inputField"><input type="password" name="password" placeholder="Inserisci password " required /> </div> </span> 

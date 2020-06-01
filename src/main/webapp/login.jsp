@@ -50,8 +50,9 @@
                 </div>
                 <input type="submit" value="LOGIN" class="submit" name="submit" />
                 <input type="reset" value="RESET" class="reset" name="reset" />
-                <h2> NON SEI ANCORA REGISTRATO? VAI A <a href="registrazione.jsp">REGISTRAZIONE</a> </h2>
+                
             </form>
+                <h2> NON SEI ANCORA REGISTRATO? VAI A <a href="registrazione.jsp">REGISTRAZIONE</a> </h2>
             </center>
 
         </div>

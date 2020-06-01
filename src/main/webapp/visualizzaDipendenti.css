@@ -4,17 +4,54 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 1-giu-2020, 11.07.40
+    Created on : 1-giu-2020, 15.07.05
     Author     : Antonio
 */
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1-giu-2020, 9.48.08
+    Author     : Antonio
+*/
+
+
+#tab {
+  
+  padding: 20px;
+  width: 50%;
+  background-color:#e6ef7f;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: black;
+}
+
+
+    
+    
 
 footer{
     background-color: #e6ef7f;
     text-align: center;
     margin-top:20px;
 }
-
-
 
 
 
@@ -26,7 +63,6 @@ footer{
     background-color: #e6ef7f;
   
 }
-
 
 .sidenav a {
     text-decoration: none;
@@ -47,18 +83,4 @@ footer{
 .sidenav a:hover{
   background-color: #81b522;
   
-}
-
-#chiSiamo {
-    background-color: #e6ef7f;
-    width: 50%;
-    height: 700px;
-    padding-top: 52px;
-}
-
-#text{
-    text-transform: uppercase;
-    padding-top: 50px;
-    font-weight: bold;
-    font-size: larger;
 }

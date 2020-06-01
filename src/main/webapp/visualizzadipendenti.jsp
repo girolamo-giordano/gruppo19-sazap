@@ -11,7 +11,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <LINK rel= "stylesheet" href="visualizzaDipendenti.css" type="text/css">
+        
+        <link href="visualizzaDipendenti.css" rel="stylesheet" type="text/css"/>
         <title>Invia Richiesta Lavoro</title>
     </head>
     <body>
@@ -37,6 +38,10 @@
             
             %>
             
+            
+            <center>
+                <div id="tab">
+                    <h2> VISUALIZZAZIONE DIPENDENTI DISPONIBILI </h2>
             <table border="3">
                 <thead>
                 <tr>
@@ -63,6 +68,8 @@
                 </tbody>
              
             </table>
+                </div>
+            </center>
                 
         </div>
           <footer>
