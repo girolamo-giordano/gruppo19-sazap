@@ -4,6 +4,12 @@
     Author     : Antonio
 --%>
 
+<%@page import="java.util.Comparator"%>
+<%@page import="entita.Richiestalavoro"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Collections"%>
+<%@page import="entita.Dipendente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,27 +31,303 @@
            
              <a href="./logout">LOGOUT</a> 
         </div>
-        
+       <%
+           Dipendente dip= (Dipendente)request.getSession().getAttribute("loggatod");
+           Collections.sort(dip.getRichiesteLavoro());
+
+           %>
         <center>
                 <div id="tab">
                     <h2> LA MIA AGENDA </h2>
         <table border="1">
+            <%
+                 boolean [] matrix=new boolean[12];
+                    int i;
+                    for(i=0;i<12;i++)
+                    {
+                        matrix[i]=false;
+                    }
+                for(Richiestalavoro e: dip.getRichiesteLavoro())
+                {
+                    %>
+                    <%
+                   
+                    if(e.getData().substring(5,7).equals("01"))
+                    {
+                        
+                        if(matrix[0]==false){
+                        matrix[0]=true;    
+                        
+                    %>
             <thead>
                 <tr>
-                    <th></th>
+                    <th>GENNAIO</th>
                 </tr>
             </thead>
+            <%}
+                %>
             <tbody>
                 <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
                 </tr>
             </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("02"))
+                    {
+                        
+                        if(matrix[1]==false){
+                        matrix[1]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>FEBBRAIO</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("03"))
+                    {
+                        
+                        if(matrix[2]==false){
+                        matrix[2]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>MARZO</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("04"))
+                    {
+                        
+                        if(matrix[3]==false){
+                        matrix[3]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>APRILE</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("05"))
+                    {
+                        
+                        if(matrix[4]==false){
+                        matrix[4]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>MAGGIO</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("06"))
+                    {
+                        
+                        if(matrix[5]==false){
+                        matrix[5]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>GIUGNO</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("07"))
+                    {
+                        
+                        if(matrix[6]==false){
+                        matrix[6]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>LUGLIO</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+            <%
+                   
+                    if(e.getData().substring(5,7).equals("08"))
+                    {
+                        
+                        if(matrix[7]==false){
+                        matrix[7]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>AGOSTO</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("09"))
+                    {
+                        
+                        if(matrix[8]==false){
+                        matrix[8]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>SETTEMBRE</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("10"))
+                    {
+                        
+                        if(matrix[9]==false){
+                        matrix[9]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>OTTOBRE</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("11"))
+                    {
+                        
+                        if(matrix[10]==false){
+                        matrix[10]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>NOVEMBRE</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+                <%
+                   
+                    if(e.getData().substring(5,7).equals("12"))
+                    {
+                        
+                        if(matrix[11]==false){
+                        matrix[11]=true;    
+                        
+                    %>
+            <thead>
+                <tr>
+                    <th>DICEMBRE</th>
+                </tr>
+            </thead>
+            <%}
+                %>
+            <tbody>
+                <tr>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                </tr>
+            </tbody>
+            <%}
+                %>
+            <%
+                }%>
         </table>
 
                 </div>

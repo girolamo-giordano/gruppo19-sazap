@@ -5,13 +5,14 @@
  */
 package entita;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 /**
  *
  * @author Gino
  */
-public class Richiestalavoro {
+public class Richiestalavoro implements Comparable<Richiestalavoro>{
     
     private int id;
     private String nome;
@@ -133,6 +134,12 @@ public class Richiestalavoro {
     public String toString() {
         return "Richiestalavoro{" + "nome=" + nome + ", azienda=" + azienda + ", competenze=" + competenze + ", data=" + data + ", orario=" + orario + ", note=" + note + '}';
     }
+
+    @Override
+    public int compareTo(Richiestalavoro o) {
+        return this.getData().compareTo(o.getData());
+    }
+    
     
     
     

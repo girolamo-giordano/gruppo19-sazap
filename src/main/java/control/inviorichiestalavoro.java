@@ -67,13 +67,15 @@ public class inviorichiestalavoro extends HttpServlet {
         String id= request.getParameter("idl");
         String nomel=request.getParameter("nomel");
         String aziendal=request.getParameter("aziendal");
+        String aziendamm=request.getParameter("aziendamm");
         String competenzel=request.getParameter("competenzel");
         String appuntamentol=request.getParameter("appuntamentol");
-        System.out.println("rich "+appuntamentol);
+        System.out.println("rich "+appuntamentol.substring(5, 7));
+        System.out.println("numb "+Integer.parseInt(appuntamentol.substring(5,7)));
         String oral=request.getParameter("oral");
         String notel=request.getParameter("notel");
         Richiestalavoro rl= new Richiestalavoro();
-        rl.setAzienda(aziendal);
+        rl.setAzienda(aziendamm);
         rl.setCompetenze(competenzel);
         rl.setData(appuntamentol);
         rl.setOrario(oral);

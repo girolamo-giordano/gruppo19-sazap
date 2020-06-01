@@ -4,6 +4,8 @@
     Author     : Antonio
 --%>
 
+<%@page import="entita.Azienda"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,19 +27,29 @@
            
              <a href="./logout">LOGOUT</a> 
         </div>
+               <%
+                   ArrayList<Azienda> aziende=(ArrayList< Azienda >)request.getSession().getAttribute("aziende");
+                   Azienda az=new Azienda();
+                   for(Azienda e: aziende)
+                   {
+                       if(e.getNome().equals(request.getParameter("nomeaz")))
+                           
+                           az=e;
+                   }
+                   %>
             
             <center>
             <div id="reg">
                 <h1 id="titolo">INFORMAZIONI AZIENDA</h1>
             <form>
                 <span> <div class="nameField"> Nome azienda: </div>
-                    <div class="inputField"> <input type="text" name="nome" value=<%=%> readonly/> </div> </span>
+                    <div class="inputField"> <input type="text" name="nome" value="<%=az.getNome()%>" readonly/> </div> </span>
                 
                     <span> <div class="nameField"> Indirizzo: </div>
-                        <div class="inputField"> <input type="text" name="indirizzo" value=<%=%> readonly /> </div>  </span>
+                        <div class="inputField"> <input type="text" name="indirizzo" value="<%=az.getIndirizzo()%>" readonly /> </div>  </span>
                 
                          <span>  <div class="nameField"> Telefono: </div>
-                            <div class="inputField">  <input type="number" name="telefono" value=<%=%> readonly/> </div>  </span>
+                            <div class="inputField">  <input type="number" name="telefono" value="<%=az.getNumerotel()%>" readonly/> </div>  </span>
                    
                            
                 

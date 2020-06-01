@@ -4,6 +4,7 @@
     Author     : Gino
 --%>
 
+<%@page import="entita.Amministratore"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,8 +35,12 @@
         <div id="inviaRichiesta" style="
     height: 500px;
 ">
+            <%
+                Amministratore amm= (Amministratore) request.getSession().getAttribute("loggatoa");
+                %>
         <form name="inviorichiestal" action="./inviorichiestalavoro" method="POST">
             <input type="hidden" name="idl" value="<%=request.getParameter("id")%>">
+            <input type="hidden" name="aziendamm" value="<%=amm.getAzienda().getNome()%>"
             
             <span><div class="nameField">Nome:</div>
                 <div class="inputField"> <input type="text" name="nomel" value="<%=request.getParameter("nome")%>" readonly="readonly" /> </div></span>
