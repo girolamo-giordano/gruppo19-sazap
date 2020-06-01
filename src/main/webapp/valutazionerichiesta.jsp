@@ -46,7 +46,8 @@
                 <input type="text" name="ora" value="<%=request.getParameter("ora")%>" readonly="readonly"  /> <span
             
             <span> <div class="nameField">Note:</div>
-                    <textarea name="note" value="<%=request.getParameter("note")%>" readonly="readonly"> </textarea> </span>
+                  
+                        <input type="text" name="note" value="<%=request.getParameter("note")%>" readonly="readonly"/>  </span>
             
             <div id="bottoni">
                 <input type="submit" value="ACCETTA" name="submit" class="butt" />
