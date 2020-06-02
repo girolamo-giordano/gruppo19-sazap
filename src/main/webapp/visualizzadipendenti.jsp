@@ -13,6 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <link href="visualizzaDipendenti.css" rel="stylesheet" type="text/css"/>
+        <link href="visualizzaDipendenti.css" rel="stylesheet" type="text/css"/>
         <title>Invia Richiesta Lavoro</title>
     </head>
     <body>

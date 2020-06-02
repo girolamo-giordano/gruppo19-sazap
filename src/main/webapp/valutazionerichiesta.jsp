@@ -34,20 +34,20 @@
             <input type="hidden" name="id" value="<%=request.getParameter("id")%>">
             
             <span> <div class="nameField">Azienda:</div>
-            <input type="text" name="azienda" value="<%=request.getParameter("azienda")%>" readonly="readonly" /> </span>
+                <div class="inputField"> <input type="text" name="azienda" value="<%=request.getParameter("azienda")%>" readonly="readonly" /> </div> </span>
             
             <span> <div class="nameField">Competenze:</div>
-            <input type="text" name="competenze" value="<%=request.getParameter("competenze")%>" readonly="readonly" /> </span>
+                <div class="inputField"><input type="text" name="competenze" value="<%=request.getParameter("competenze")%>" readonly="readonly" /> </div> </span>
             
             <span> <div class="nameField">Giorno appuntamento:</div>
-                <input type="text" name="appuntamento" value=" <%=request.getParameter("appuntamento")%>" readonly="readonly"  /> </span>
+                <div class="inputField"><input type="text" name="appuntamento" value=" <%=request.getParameter("appuntamento")%>" readonly="readonly"  /> </div> </span>
             
             <span> <div class="nameField">Ora appuntamento:</div>
-                <input type="text" name="ora" value="<%=request.getParameter("ora")%>" readonly="readonly"  /> <span
+                <div class="inputField"><input type="text" name="ora" value="<%=request.getParameter("ora")%>" readonly="readonly"  /> </div><span
             
             <span> <div class="nameField">Note:</div>
                   
-                        <textarea name="note" value="<%=request.getParameter("note")%>" readonly="readonly" style="resize:none"><%=request.getParameter("note")%> </textarea> </span>
+                    <div class="inputField"> <textarea name="note" value="<%=request.getParameter("note")%>" readonly="readonly" style="resize:none"><%=request.getParameter("note")%> </textarea></div> </span>
             
             <div id="bottoni">
                 <input type="submit" value="ACCETTA" name="submit" class="butt" />

@@ -16,7 +16,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="inviaRichiestaLavoro.css" rel="stylesheet" type="text/css"/>
+        <link href="agenda.css" rel="stylesheet" type="text/css"/>
+        
+        <link href="agenda.css" rel="stylesheet" type="text/css"/>
         <title>AGENDA</title>
     </head>
     <body>
@@ -40,6 +42,7 @@
         <center>
                 <div id="tab">
                     <h2> LA MIA AGENDA </h2>
+                    
         <table border="1">
             <%
                  boolean [] matrix=new boolean[12];
@@ -71,7 +74,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -94,7 +97,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -117,7 +120,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -140,7 +143,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -163,7 +166,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -186,7 +189,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -209,7 +212,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -232,7 +235,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -255,7 +258,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -278,7 +281,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -301,7 +304,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
@@ -324,7 +327,7 @@
                 %>
             <tbody>
                 <tr>
-                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.toString()%></a></td>
+                    <td><a href="infoAzienda.jsp?nomeaz=<%=e.getAzienda()%>"><%=e.getCompetenze() %>, <%=e.getData() %>, <%=e.getOrario() %>, <%=e.getNote() %> </a></td>
                 </tr>
             </tbody>
             <%}
