@@ -24,6 +24,9 @@ form {
 
 
 footer{
+    position: fixed;
+    bottom:0;
+    width: 99%;
     background-color: #e6ef7f;
     text-align: center;
     margin-top:20px;
