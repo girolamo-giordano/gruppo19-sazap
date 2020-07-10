@@ -58,7 +58,7 @@
                 <div class="inputField"> <input type="time" name="oral" required  /> </div></span>
             
             <span><div class="nameField">Note:</div>
-                <div class="inputField"><textarea rows="2" cols="20" name="notel" placeholder="Inserire ulteriori note"> </textarea> </div></span
+                <div class="inputField"><textarea style="resize:none" rows="4" cols="30" name="notel" placeholder="Inserire ulteriori note"> </textarea> </div></span
             
             <div id="bottoni">
                 <input type="submit" value="INVIA RICHIESTA" name="submit" class="butt" />

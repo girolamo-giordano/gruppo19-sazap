@@ -52,13 +52,15 @@
                          <div class="inputField"><input type="text" name="username" placeholder="Inserisci username.." required/></div> </span> 
                 
                          <span> <div class="nameField"> Password: </div>
-                             <div class="inputField"><input type="password" name="password" placeholder="Inserisci password " required /> </div> </span> 
+                             <div class="inputField"><input type="password" name="password" id="password" placeholder="Inserisci password " required /> </div> </span> 
                 
                              <span> <div class="nameField"> Conferma Password: </div>
-                                 <div class="inputField"><input type="password" name="cpassword" placeholder="Conferma password " /> </div> </span> 
+                                 <div class="inputField"><input type="password" name="cpassword" id="confirm_password" placeholder="Conferma password " onfocusout='check();' /> </div> </span> 
+                                  <span id='message'></span>
+</label>    
                                  
                                  <div id="bottoni">
-                                    <input type="submit" value="REGISTRATI" name="submit" class="butt" />
+                                    <input type="submit" value="REGISTRATI" name="submit" id="but" class="butt" />
                                     <input type="reset" value="RESET"class="butt">
                                     </div>
             </form>
@@ -83,5 +85,19 @@
             
         
     </body>
+    <script>
+    var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = '';
+    document.getElementById('but').disabled=false;
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'Password e conferma password non corrispondono';
+    document.getElementById('but').disabled=true;
+  }
+}
+</script>
 </html>
 

@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <META http-equiv="refresh" content="3;URL=http://localhost:8080/SAZAP/login.jsp">
+        <META http-equiv="refresh" content="3;URL=http://localhost:8080/SAZAP/home.jsp">
         <LINK rel= "stylesheet" href="login.css" type="text/css">
         
         
@@ -35,8 +35,8 @@
         <div id="main" style="width: 950px;">
              
             <center> <form name="login" action="./login" method="POST">
-                    <center> <h1 id="titolo">ERRORE LOGIN</h1> </center>
-                <label> LOGIN FALLITO, RICONTROLLA LE CREDENZIALI, SARAI REINDIRIZZATO AL LOGIN</label>
+                    <center> <h1 id="titolo">REGISTRAZIONE RIUSCITA</h1> </center>
+                <label> HAI EFFETTUATO LA REGISTRAZIONE CON SUCCESSO, SARAI REINDIRIZZATO ALLA HOMEPAGE</label>
                 
                 
                

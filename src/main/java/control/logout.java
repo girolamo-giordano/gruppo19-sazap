@@ -46,7 +46,7 @@ public class logout extends HttpServlet {
         
         request.getSession().setAttribute("loggatod", null);
         request.getSession().setAttribute("loggatoa", null);
-        response.sendRedirect("./home.jsp");
+        response.sendRedirect("./logoutsucc.jsp");
        
     }
 

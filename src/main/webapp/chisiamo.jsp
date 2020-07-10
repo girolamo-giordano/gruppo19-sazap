@@ -25,7 +25,7 @@
             if(dip != null && amm==null){
         %>
         
-        //lavoratore <%=dip.toString()%>
+        
         
         <div class="sidenav">
         
@@ -42,7 +42,7 @@
             } else if (amm != null && dip==null){
             %>
         
-        //Amministratore <%=amm.toString()%>
+        
         
         <div class="sidenav">
              <a href="home.jsp">HOME</a> 

@@ -129,7 +129,7 @@ public class registrazione extends HttpServlet {
             
         }
         
-        response.sendRedirect("./home.jsp");
+        response.sendRedirect("./regsucc.jsp");
         
         
         

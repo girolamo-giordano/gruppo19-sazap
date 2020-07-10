@@ -62,6 +62,7 @@ public class login extends HttpServlet {
            String username= request.getParameter("username");
            String password= request.getParameter("password");
            String ruolo=request.getParameter("ruolo");
+           boolean cc=false;
            
            if(ruolo.equals("dipendente"))
            {
@@ -72,7 +73,10 @@ public class login extends HttpServlet {
                 if(password.equals(dip.getPassword()))
                 {
                     request.getSession().setAttribute("loggatod", dip);
+                    cc=true;
+                  
                 }
+                
             }
            }
            else if(ruolo.equals("amministratore"))
@@ -84,11 +88,21 @@ public class login extends HttpServlet {
                 if(password.equals(amm.getPassword()))
                 {
                     request.getSession().setAttribute("loggatoa", amm);
+                    cc=true;
+                    
                 }
+                
             } 
            }
+           if(cc)
+           {
+               response.sendRedirect("./loginsucc.jsp");
+           }
+           else{
+               response.sendRedirect("./errorelogin.jsp");
+           }
            
-           response.sendRedirect("./home.jsp");
+           
     }
 
     /**
