@@ -89,7 +89,7 @@ public class inviorichiestalavoro extends HttpServlet {
             }
         }
         
-        response.sendRedirect("./home.jsp");
+        response.sendRedirect("./richiestainvsucc.jsp");
         
     }
 

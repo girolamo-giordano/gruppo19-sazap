@@ -26,8 +26,8 @@
         <div id="main" style="width: 950px;">
              
             <center> <form name="login" action="./login" method="POST">
-                    <center> <h1 id="titolo">LOGOUT RIUSCITO</h1> </center>
-                <label> HAI EFFETTUATO IL LOGOUT CON SUCCESSO, SARAI REINDIRIZZATO ALLA HOMEPAGE</label>
+                    <center> <h1 id="titolo">RICHIESTA DI LAVORO INVIATA </h1> </center>
+                <label> HAI INVIATO LA RICHIESTA DI LAVORO CON SUCCESSO, SARAI REINDIRIZZATO ALLA HOMEPAGE</label>
                 
                 
                

@@ -20,16 +20,7 @@
     <body>
         <a href="home.jsp"><img src="SAZAPlogo2.png" width="300" height="300" alt="SAZAPlogo2"/> </a>
 
-        <div class="container">
-        
-            <div class="sidenav">
-             <a href="home.jsp">HOME</a>
-             <a href="chisiamo.jsp">CHI SIAMO</a>
-
-             <a href="registrazione.jsp">REGISTRAZIONE</a>
-             <a href="login.jsp">LOGIN</a>
-                          
-        </div>
+       
          
     <center>
         <div id="main" style="width: 950px;">
